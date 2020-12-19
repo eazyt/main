@@ -1,0 +1,232 @@
+  
+
+<%- include('includes/header') %>
+
+  <!-- ======= Landing-Page Section ======= -->
+  <section id="landing">
+    <div class="landingOverlay">
+
+      <header>
+
+
+        <h1 id="title">Thabo Ramohlale
+
+          <h2 id="position">I'm a <span class="typed"
+              data-typed-items="Freelancer, DevOps Engineer, Developer, Full Stack Engineer"></span></h2>
+        </h1>
+
+
+
+        <div class="landingButtons">
+          <a href="#portfolio" class="btn animated slideInLeft" id="projectBtn">
+            View Projects
+          </a>
+          <a href="../images/resume.pdf" target="_blank" class="btn animated slideInRight" id="resumeBtn">
+            View pdf Resume
+          </a>
+        </div>
+        <ul class="icons">
+          <li>
+            <a class="contactIcon animated bounceInDown githubLink" href="https://github.com/eazyt" target="_blank"
+              rel="noopener">
+              <i class="fab fa-github-alt" title="Github Logo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="contactIcon animated bounceInDown linkedInLink"
+              href="https://www.linkedin.com/in/thabo-ramohlale-74672423/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin" title="LinkedIn Logo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="contactIcon animated bounceInDown twitterLink" href="https://twitter.com/EazyTSa" target="_blank""
+                      rel=" noopener">
+              <i class="fab fa-twitter" title="Twitter Logo"></i>
+            </a>
+          </li>
+        </ul>
+
+
+      </header>
+    </div>
+  </section>
+  <!-- ======= End Landing-Page Section ======= -->
+
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio section-bg pt-3">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Projects</h2>
+        <p>With these project i seek demostrate that i have used some technologies listed in my resume..</p>
+      </div>
+
+
+      <div class="row" data-aos="fade-up">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".web">Websites</li>
+            <li data-filter=".api">API</li>
+            <li data-filter=".cms">CMS</li>
+          </ul>
+        </div>
+      </div>
+
+
+ 
+      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+      <% if (posts.length) { %>
+        <% posts.forEach(function(post) { %>
+        <div class="col-lg-4 col-md-6 portfolio-item <%= post.category %>">
+            <div class="portfolio-wrap">
+              <img src="<%= post.imageUrl %>" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="<%= post.imageUrl %>" data-gall="portfolioGallery" class="venobox" title="<%= post.title %>"><i
+                    class="bx bx-plus"></i></a>
+                <a href="/post/<%= post._id %>" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+        </div>
+        <% }) %>
+      <% } %>
+      </div>
+
+      <a href="/portfolio" class="btn text-center"><span class="text-primary">Read</span> More</a>
+      </div>
+      <!-- <button class="btn text-center" href="/contact"><span class="text-primary">Read</span> More</button> -->
+    </div>
+  </section><!-- ======= End Portfolio Section ======= -->
+
+  <!-- ======= Skills Section ======= -->
+  <section id="testimonials" class="testimonials section-bg">
+    <div class="container">
+
+      <div class="section-title">
+        <!-- <h2>Testimonials</h2> -->
+        <h2>Skills</h2>
+        <p>On a day to day basis i encouter and or use some of the technologies listed below depending on what king of
+          project i am working on</p>
+      </div>
+
+      <div class="owl-carousel testimonials-carousel">
+
+        <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            In the world full of Python, be my JavaScript. - Ipsita
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+          <img src="/public/logos/javascript.png" class="testimonial-img" alt="">
+          <h3>JavaScript</h3>
+        </div>
+        
+        <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            props and state are really my thing. what component can i create for your desire.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+          <img src="/public/logos/react.jpg" class="testimonial-img" alt="">
+          <h3>React</h3>
+        
+        </div>
+
+        <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            Unopnionated framework since slice of bread. how u like that.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+          <img src="/public/logos/nodejs-logo.jpg" class="testimonial-img" alt="">
+          <h3>Node Js</h3>
+        </div>
+
+        <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            Elimanating 'It doesn't work on my machine in short steps and time' .
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+          <img src="/public/logos/icons8-docker-240.png" class="testimonial-img" alt="">
+          <h3>Docker</h3>
+        </div>
+
+        <div class="testimonial-item" data-aos="fade-up">
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            Quote Max MacMillian Academin.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+          <img src="/public/logos/mongo-db-logo.png" class="testimonial-img" alt="">
+          <h3>MongoDB</h3>
+        </div>
+
+        <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            CI/CD is my middle name. How can i automate your pipeline.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+          <img src="/public/logos/jenkins.jpg" class="testimonial-img" alt="">
+          <h3>jenkins</h3>
+        </div>
+
+        <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            Orchestration is my wisdom giveen gift, how can i for tell your deployment.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+          <img src="/public/logos/Kubernetes.logo.png" class="testimonial-img" alt="">
+          <h3>Kubernetes</h3>
+
+        </div>
+
+        <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            i can tell you one thing or two about system resource stavartion or alert you in your sleep if you like. you
+            never have have to miss an event.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+          <img src="/public/logos/grafana.jpg" class="testimonial-img" alt="">
+          <h3>Grafana</h3>
+
+        </div>
+        <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            i can tell you one thing or two about system resource stavartion or alert you in your sleep if you like. you
+            never have have to miss an event.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+          <img src="/public/logos/ansible.png" class="testimonial-img" alt="">
+          <h3>Ansible</h3>
+
+        </div>
+
+        <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            i can tell you one thing or two about system resource stavartion or alert you in your sleep if you like. you
+            never have have to miss an event.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+          <img src="/public/logos/aws_logo.png" class="testimonial-img" alt="">
+          <h3>Amazon Web Services</h3>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </section><!-- ======= End Skills Section ======= -->
+
+  <%- include('includes/footer') %>
+  
+
+  
