@@ -23,6 +23,14 @@ const PostSchema = new mongoose.Schema({
     data: Buffer,
     ContentType: String
   },
+  imageUrl_1: {
+    data: Buffer,
+    ContentType: String
+  },
+  imageUrl_2: {
+    data: Buffer,
+    ContentType: String
+  },
   createdAt: {
     type: Date,
     default: new Date()
