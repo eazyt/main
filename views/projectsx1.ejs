@@ -1,182 +1,51 @@
 <%- include('includes/header') %>
 
-    <!-- ======= Portfolio Section ======= -->
-    <!-- <section id="portfolio" class="portfolio section-bg">
+    <!-- ======= Portfolio Details Section ======= -->
+
+    <section id="portfolio-details" class="portfolio-details">
+    </br>
+    </br>
+    </br>
+    <!-- </br> -->
+    <!-- </br> -->
       <div class="container">
-    
-        <div class="section-title">
-          <h2>Projects</h2>
-          <p>With these project i seek demostrate that i have used some technologies listed in my resume..</p>
-        </div>
-    
-    
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">Websites</li>
-              <li data-filter=".filter-card">API</li>
-              <li data-filter=".filter-web">CMS</li>
+                <div class="section-title">
+                  <h2>Projects</h2>
+                  <p>With these project i seek demostrate that i have used some technologies listed in my resume..</p>
+                </div>
+
+        <div class="portfolio-details-container">
+          <div class="owl-carousel portfolio-details-carousel">
+            <img src="<%- posts.imageUrl %>" class="img-fluid" alt="">
+            <img src="<%- posts.imageUrl_1 %>" class="img-fluid" alt="">
+            <img src="<%- posts.imageUrl_2 %>" class="img-fluid" alt="">
+          </div>
+
+          <div class="portfolio-info">
+            <h3><%= posts.title %></h3>
+            <ul>
+              <li><strong>Category</strong>: <%= posts.category %> </li>
+              <li><strong>Frontend</strong>: <%= posts.frontend %></li>
+              <li><strong>Backend</strong>: <%= posts.backend %></li>
+              <li><strong>Scripting</strong>: <%= posts.language %></li>
+              <li><strong>Project URL</strong>: <a href="<%= posts.live %>"><%= posts.live %></a></li>
             </ul>
           </div>
+          
         </div>
-    
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-    
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i
-                    class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+
+        <article>
+
+          <div class="portfolio-description">
+            <h2><%= posts.subtitle %></h2>
+            <p>
+              <%- posts.content %>
+            </p>
           </div>
-    
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i
-                    class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-    
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" title="App 2"><i
-                    class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-    
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i
-                    class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-    
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" title="Web 2"><i
-                    class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-    
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox" title="App 3"><i
-                    class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-    
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" title="Web 2"><i
-                    class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-    
-    
-        </div>
+        </article>
+
       </div>
-    </section> -->
-    <!-- End Portfolio Section -->
-
-    
-      <!-- <main id="main"> -->
-      
-        <!-- ======= Breadcrumbs ======= -->
-        <!-- <section id="breadcrumbs" class="breadcrumbs">
-          <div class="container">
-      
-            <div class="d-flex justify-content-between align-items-center">
-              <h2>Portfoio Details</h2>
-              <ol>
-                <li><a href="index">Home</a></li>
-                <li>Portfoio Details</li>
-              </ol>
-            </div>
-      
-          </div>
-        </section> -->
-        <!-- End Breadcrumbs -->
-      
-        <!-- ======= Portfolio Details Section ======= -->
-        <!-- </main> -->
-        <!-- End #main -->
-
-
-        <section id="portfolio-details" class="portfolio-details">
-        </br>
-        </br>
-        </br>
-        <!-- </br> -->
-        <!-- </br> -->
-          <div class="container">
-                    <div class="section-title">
-                      <h2>Projects</h2>
-                      <p>With these project i seek demostrate that i have used some technologies listed in my resume..</p>
-                    </div>
-      
-            <div class="portfolio-details-container">
-              <div class="owl-carousel portfolio-details-carousel">
-                <img src="<%- posts.imageUrl %>" class="img-fluid" alt="">
-                <img src="<%- posts.imageUrl_1 %>" class="img-fluid" alt="">
-                <img src="<%- posts.imageUrl_2 %>" class="img-fluid" alt="">
-                <!-- <img src="img/portfolio-details-1.jpg" class="img-fluid" alt="">
-                <img src="img/portfolio-details-2.jpg" class="img-fluid" alt="">
-                <img src="img/portfolio-details-3.jpg" class="img-fluid" alt=""> -->
-              </div>
-      
-              <div class="portfolio-info">
-                <h3><%= posts.title %></h3>
-                <ul>
-                  <li><strong>Category</strong>: <%= posts.category %> </li>
-                  <li><strong>Frontend</strong>: <%= posts.frontend %></li>
-                  <li><strong>Backend</strong>: <%= posts.backend %></li>
-                  <li><strong>Scripting</strong>: <%= posts.language %></li>
-                  <li><strong>Project URL</strong>: <a href="<%= posts.live %>"><%= posts.live %></a></li>
-                </ul>
-              </div>
-              
-            </div>
-      
-            <article>
-
-              <div class="portfolio-description">
-                <h2><%= posts.subtitle %></h2>
-                <p>
-                  <%- posts.content %>
-                </p>
-              </div>
-            </article>
-      
-          </div>
-        </section><!-- End Portfolio Details Section -->
+    </section><!-- End Portfolio Details Section -->
 
 
 <%- include('includes/footer') %>
