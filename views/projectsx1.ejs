@@ -9,10 +9,10 @@
     <!-- </br> -->
     <!-- </br> -->
       <div class="container">
-                <div class="section-title">
-                  <h2>Projects</h2>
-                  <p>With these project i seek demostrate that i have used some technologies listed in my resume..</p>
-                </div>
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>With these project i seek demostrate that i have used some technologies listed in my resume..</p>
+        </div>
 
         <div class="portfolio-details-container">
           <div class="owl-carousel portfolio-details-carousel">
@@ -28,17 +28,18 @@
               <li><strong>Frontend</strong>: <%= posts.frontend %></li>
               <li><strong>Backend</strong>: <%= posts.backend %></li>
               <li><strong>Scripting</strong>: <%= posts.language %></li>
-              <li><strong>Project URL</strong>: <a href="<%= posts.live %>"><%= posts.live %></a></li>
+              <li><strong>Github</strong>: <a href="<%= posts.github %>"><%= posts.github %></a></li>
+              <li><strong>Demo</strong>: <a href="<%= posts.live %>"><%= posts.live %></a></li>
             </ul>
           </div>
           
         </div>
 
-        <article>
+        <article >
 
-          <div class="portfolio-description">
+          <div class="portfolio-description" >
             <h2><%= posts.subtitle %></h2>
-            <p>
+            <p class="section-title" >
               <%- posts.content %>
             </p>
           </div>
