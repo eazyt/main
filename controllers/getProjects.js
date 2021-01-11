@@ -20,6 +20,7 @@ exports.getHomePage = async (req, res) => {
 };
 
 exports.getPortfolioPage = async (req, res) => {
+  console.log('PASS 1')
   let posts = await Post.find({})
   res.render('portfolio', {
     posts: posts
